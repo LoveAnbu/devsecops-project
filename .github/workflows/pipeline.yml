@@ -40,7 +40,7 @@ jobs:
 
     # 🔍 Trivy Scan
     - name: Scan Image
-      uses: aquasecurity/trivy-action@0.20.0
+      uses: aquasecurity/trivy-action@2.1.0
       with:
         image-ref: ${{ env.ECR_REPOSITORY }}:${{ env.IMAGE_TAG }}
         exit-code: '1'
