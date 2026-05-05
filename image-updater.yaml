@@ -1,0 +1,17 @@
+apiVersion: argocd-image-updater.argoproj.io/v1alpha1
+kind: ImageUpdater
+metadata:
+  name: devsecops-app-updater
+  namespace: argocd
+spec:
+  application:
+    name: devsecops-app
+
+  imageList:
+    - name: app
+      image: 342640191734.dkr.ecr.us-east-1.amazonaws.com/devsecops-app
+      updateStrategy: newest-build
+      allowTags: regexp:^[a-f0-9]{40}$
+
+  git:
+    writeBackMethod: git
