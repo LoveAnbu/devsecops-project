@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: app
-          image: 342640191734.dkr.ecr.us-east-1.amazonaws.com/devsecops-app:latest
+          image: 342640191734.dkr.ecr.us-east-1.amazonaws.com/devsecops-app:a6b6f3ff387a2da966543393352d774c3cbc4517
           ports:
             - containerPort: 3000
 
